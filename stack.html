@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Stack
+	</title>
+
+
+	<style>
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			background-color: palegreen;
+		}
+
+		.flex-container>div {
+			/*div children of the flex container*/
+			background-color: teal;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+		}
+
+		/* Responsive layout */
+		@media (max-width: 600px) {
+			.flex-container {
+				flex-direction: column;
+				background-color: brown;
+			}
+		}
+
+		.input-div>input {
+			width: 10%;
+			border: none;
+			border-bottom: 1px solid black;
+			outline: none;
+			font-size: medium;
+			padding: 3px;
+
+		}
+
+		.pushbtn{
+			background-color: black;
+			border: black;
+			color: white;
+			padding: 5px;
+			font-size: larger;
+			margin-left: 5px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		.pushbtn:hover {
+			background-color: purple;
+			color: darkslategray;
+			font-weight: bold;
+		}
+		.popbtn ,.zapbtn{
+			background-color:black;
+			border: black;
+			color: green;
+			padding: 5px;
+			font-size: larger;
+			margin-left: 10px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.popbtn:hover ,.zapbtn:hover{
+			background-color: red;
+			border: black;
+			color: deeppink;
+		}
+
+	</style>
+	<script>
+
+	</script>
+</head>
+
+
+
+<body>
+	<h1>Satya Tummala builds a stack</h1>
+	<div>
+
+	</div>
+	<div class="flex-container" id="target">
+		<div class="stack">row item 1</div>
+		<div class="stack">row item 2</div>
+		<div class="stack">row item 3</div>
+	</div>
+
+	<p> Press the button to create an new element of type div and then add it to the container.
+	</p>
+	<div class="input-div">
+		<input id="input" type="text" />
+		<button class="pushbtn" onclick="makeNewDiv()">Push value</button>
+		<button class="popbtn" onclick="popItem()">Pop</button>
+		<button class="zapbtn" onclick="Zapvalues()">Zap values</button>
+		<button class="zapbtn" onclick="uniqueHandler()">Unique</button>
+
+
+	</div>
+
+
+
+</body>
+<script>
+
+	function uniqueHandler(){
+
+		let stackItems = document.getElementsByClassName('stack');
+		for (let index = 0; index < stackItems.length; index++) {
+				let element = stackItems[index].innerHTML;
+				for (let insideIndex = index+1; insideIndex < stackItems.length; insideIndex++) {
+					let elementInside = stackItems[insideIndex].innerHTML;
+
+					if (element == elementInside) {
+					console.log(stackItems[insideIndex])
+					stackItems[insideIndex].remove();
+					insideIndex--;
+					index--;
+				}
+
+					
+				}
+				
+			}
+
+	}
+	function makeNewDiv() {
+		/* make the div and its text */
+		let data = document.getElementById("input").value;
+		let element = document.createElement("div")
+		element.innerHTML = data
+		element.className = "stack"
+
+
+		/* add it to the container */
+		document.getElementById('target').appendChild(element)
+
+	}
+	function popItem() {
+		let stackItems = document.getElementsByClassName('stack');
+		if (stackItems != undefined && stackItems.length > 0) {
+			stackItems[stackItems.length - 1].remove();
+		}
+
+	}
+	function Zapvalues() {
+		let data = document.getElementById("input").value;
+		let stackItems = document.getElementsByClassName('stack');
+
+		if (stackItems != undefined && stackItems.length > 0) {
+			let stacksLength = stackItems.length;
+			for (let index = 0; index < stackItems.length; index++) {
+				let element = stackItems[index].innerHTML;
+				if (element == data) {
+					console.log(stackItems[index])
+					stackItems[index].remove();
+					index--;
+				}
+
+			}
+		}
+
+
+	}
+</script>
+
+</html>

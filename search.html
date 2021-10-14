@@ -96,78 +96,78 @@
     </script>
 
 </head>
-
 <body>
     <div class="container">
-        <h1 class="text-center text-white" style="color: orchid;">"Animals hunt" by Satya Tummala</h1>
+        <h1 class="text-center text-white">Animal hunt by Satya Tummala</h1>
         <div class="row justify-content-around">
-            <div class="btn default-color bold col-md-5 shadow-lg p-3 mb-5 bg-white rounded hover" style="font-weight: bold;">Click on the squares
+            <div class="btn default-color bold col-md-5 shadow-lg p-3 mb-5 bg-white rounded hover">Click on the squares
                 to search for wild life</div>
-            <div id="tries" class="shadow-lg p-3 mb-5 bg-white rounded col-md-3 hover" style="text-align: center; font-weight: bold;">Number of tries is zero.</div>
-            <div id="distance" class="shadow-lg p-3 mb-5 bg-white rounded col-md-3 hover" style="text-align: center; font-weight: bold">Distance is unknown.</div>
+            <div id="tries" class="shadow-lg p-3 mb-5 bg-white rounded col-md-3">Number of triesis zero.</div>
+            <div id="distance" class="shadow-lg p-3 mb-5 bg-white rounded col-md-3">Distance is unknown.</div>
+            <button onclick="reset()" >reset</button>
         </div>
 
         <div class="row justify-content-center">
             <div class="row ">
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-0" onclick="check(0)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-1" onclick="check(1)"></div>
-                
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-2" onclick="check(2)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-3" onclick="check(3)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-4" onclick="check(4)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-5" onclick="check(5)"></div>
-                </div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                    height="00px" id="img-0" onclick="check(0)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                    height="200px" id="img-1" onclick="check(1)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-2" onclick="check(2)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-3" onclick="check(3)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-4" onclick="check(4)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-5" onclick="check(5)"></div>
+
             </div>
             <div class="row">
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-6" onclick="check(6)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-7" onclick="check(7)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-8" onclick="check(8)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-9" onclick="check(9)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-10" onclick="check(10)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-11" onclick="check(11)"></div>
-                </div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-6" onclick="check(6)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-7" onclick="check(7)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-8" onclick="check(8)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-9" onclick="check(9)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-10" onclick="check(10)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-11" onclick="check(11)"></div>
+
             </div>
             <div class="row">
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-12" onclick="check(12)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-13" onclick="check(13)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-14" onclick="check(14)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-15" onclick="check(15)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-16" onclick="check(16)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-17" onclick="check(17)"></div>
-                </div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-12" onclick="check(12)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-13" onclick="check(13)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-14" onclick="check(14)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-15" onclick="check(15)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-16" onclick="check(16)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-17" onclick="check(17)"></div>
             </div>
             <div class="row">
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-18" onclick="check(18)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-19" onclick="check(19)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-20" onclick="check(20)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-21" onclick="check(21)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-22" onclick="check(22)"></div>
-                </div>
-                <div class="col-sm-2 shadow  mb-2"><img src="plant.png" alt="plant" width="200px" height="200px" id="img-23" onclick="check(23)"></div>
-                </div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-18" onclick="check(18)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-19" onclick="check(19)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-20" onclick="check(20)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-21" onclick="check(21)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-22" onclick="check(22)"></div>
+                <div class="col-sm-2 shadow  mb-2"><img class="img-fluid" src="plant.png" alt="bearcat" width="200px"
+                        height="200px" id="img-23" onclick="check(23)"></div>
             </div>
         </div>
-
     </div>
-    <br>
 
 </body>
 
