@@ -31,6 +31,69 @@
             background-color: firebrick !important;
         }
     </style>
+    <script>
+        var ids = [];
+        var triesCount = 0;
+        var animalLocation = 13;
+        var distanceOfAnimal = "unknown"
+        for (var i = 0; i < 24; i++) {
+            ids.push("img-" + i)
+        }
+
+        function reset() {
+            triesCount = 0;
+            animalLocation = Math.round(Math.random() * (23 - 0) + 0);
+            document.getElementById("tries").innerHTML = "Number of triesis zero";
+            distanceOfAnimal = "unknown"
+            document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
+            for (var i = 0; i < 24; i++) {
+                if(ids[i]== ids[animalLocation])
+                document.getElementById(ids[i]).src = "octopus.png";
+                else
+                document.getElementById(ids[i]).src = "plant.png";
+            }
+
+        }
+        function check(index) {
+            let id = ids[index];
+            if (index == animalLocation) {
+                document.getElementById(id).src = "octopus.png";
+            } else {
+                document.getElementById(id).src = "hole.png";
+            }
+
+
+            triesCount++;
+            document.getElementById("tries").innerHTML = "Number of triesis " + triesCount;
+            distanceOfAnimal = distance(index, animalLocation);
+
+            document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
+        }
+        function distance(pos1, pos2) {
+            var columm = 6;
+            var valueToaddsub = pos1 <= animalLocation ? columm : -columm;
+            var verticalDist = 0;
+            var horizantalDist = 0;
+            var minRange = Math.abs(animalLocation / columm) * columm;
+            var maxRange = minRange + (columm)
+            while (true) {
+
+                Math.abs(animalLocation - pos1)
+                if (minRange <= pos1 && pos1 < maxRange) {
+                    horizantalDist = Math.abs(animalLocation - pos1);
+                    break;
+                }
+                else {
+                    pos1 = pos1 + valueToaddsub;
+                    verticalDist = verticalDist + 1;
+                }
+            }
+
+            return Math.max(verticalDist, horizantalDist);
+        }
+
+
+    </script>
 
 </head>
 
